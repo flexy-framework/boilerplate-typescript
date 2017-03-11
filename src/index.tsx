@@ -1,8 +1,6 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { HelloWorld } from "./component/HelloWorld";
-import "./jquery_hello";
+import $ from "jquery";
+import FastClick from "fastclick";
 
-ReactDOM.render((
-    <HelloWorld content="Hello World" />
-), document.getElementById("app"));
+$(() => {
+    FastClick['attach'](document.body);
+});

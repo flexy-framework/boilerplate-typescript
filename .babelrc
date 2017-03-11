@@ -1,7 +1,4 @@
 {
-  "plugins": [
-    ["transform-react-jsx"]
-  ],
   "presets": [
     [
       "es2015",
@@ -9,7 +6,6 @@
         "modules": false
       }
     ],
-    "stage-2",
-    "react"
+    "stage-2"
   ]
 }
