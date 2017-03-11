@@ -8,6 +8,12 @@
 
 Тесты с karma и phantomjs включены
 
+## Flexyconfig
+
+`dst` - путь для сборки
+
+`proxy` - browser-sync прокси адрес
+
 ## Команды
 
 `npm run build` - Сборка для продакшена
