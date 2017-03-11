@@ -1,8 +1,7 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { h, render } from 'preact';
 import { HelloWorld } from './component/HelloWorld';
 import './jquery_hello'
 
-ReactDOM.render((
+render((
     <HelloWorld content="Hello World" />
 ), document.getElementById('app'));

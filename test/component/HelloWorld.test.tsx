@@ -1,16 +1,16 @@
-import React from "react";
-import { findDOMNode } from "react-dom";
-import * as TestUtils from "react-addons-test-utils";
+import { h, render } from "preact";
 import { HelloWorld, IHelloWorldProps } from "../../src/component/HelloWorld";
 
 describe("HelloWorld", () => {
+    let temp: any;
+
     let handleSelectionChangeSpy: jasmine.Spy;
     beforeEach(() => {
         handleSelectionChangeSpy = jasmine.createSpy("handleSelectionChange");
 
         let props: IHelloWorldProps = { content: "Hello, my first test!" };
-        this.component = TestUtils.renderIntoDocument(<HelloWorld {...props} />);
-        this.renderedDOM = () => findDOMNode(this.component);
+        this.component = render(<HelloWorld {...props} />, temp);
+        this.renderedDOM = () => this.component.getDOMNode();
     });
 
     it("given a content passed to HelloWorld", () => {

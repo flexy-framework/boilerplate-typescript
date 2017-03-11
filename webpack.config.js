@@ -10,6 +10,10 @@ module.exports = {
     },
     target: "web",
     resolve: {
+        alias: {
+            "react": "preact-compat",
+            "react-dom": "preact-compat"
+        },
         modules: [
             path.resolve(__dirname, './src'),
             'node_modules'
