@@ -1,0 +1,8 @@
+.awcache
+.idea
+*.iml
+node_modules
+npm-debug.log
+*.log
+*.pyc
+dist
