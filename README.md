@@ -16,4 +16,8 @@
 
 `npm run watch:web` - Для сборки scss, images, fonts
 
+`npm run lint:scss` - Проверка scss
+
+`npm run lint:ts` - Проверка typescript
+
 `npm test` - Запуск тестов
