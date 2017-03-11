@@ -1,0 +1,48 @@
+.b-footer-contact {
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @include flexy-breakpoint(medium) {
+    display: flex;
+  }
+
+  &__item {
+    display: block;
+    font-size: 1.2em;
+    color: map-get($flexy-theme-colors, dark);
+    @include antialias;
+    transition: color .1s ease;
+    margin-right: 3em;
+
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    @include flexy-breakpoint(medium) {
+      margin-bottom: 0 !important;
+    }
+
+    .icon {
+      transition: color .1s ease;
+      color: map-get($flexy-theme-colors, gray);
+    }
+
+    &:hover {
+      color: map-get($flexy-theme-colors, default);
+
+      .icon {
+        color: map-get($flexy-theme-colors, default);
+      }
+    }
+
+    &:last-child {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+}

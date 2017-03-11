@@ -1,0 +1,23 @@
+.b-header-top {
+  padding: .5em 0;
+  border-bottom: 1px solid darken(#f6f9fc, 3%);
+
+  &__link {
+    @include antialias;
+    color: map-get($flexy-theme-colors, gray);
+  }
+
+  &__list {
+    display: flex;
+
+    &_secondary {
+      justify-content: flex-end;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+  }
+}

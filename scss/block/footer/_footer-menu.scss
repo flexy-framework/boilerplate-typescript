@@ -1,0 +1,40 @@
+.b-footer-menu {
+  @include antialias;
+  margin-bottom: 1em;
+
+  @include flexy-breakpoint(medium) {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1em;
+    @include antialias;
+    color: map-get($flexy-theme-colors, dark);
+    margin-bottom: .5em;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    padding-right: .2em;
+    @include ellipsis;
+    margin-bottom: .2em;
+    display: block;
+    color: map-get($flexy-theme-colors, gray);
+    transition: color .1s ease;
+
+    &:hover {
+      color: map-get($flexy-theme-colors, default);
+    }
+  }
+
+  &_wide {
+    display: flex;
+    flex-wrap: wrap;
+
+    .b-footer-menu__item {
+      flex-basis: 50%;
+    }
+  }
+}

@@ -15,7 +15,7 @@ var settings = {
     },
     sass: {
         includePaths: [
-            path.join(__dirname, 'node_modules/flexy-framework')
+            'flexy-framework'
         ]
     },
     paths: {
@@ -61,12 +61,15 @@ gulp.task('css', function () {
 gulp.task('watch', function () {
     browserSync.init({
         open: false,
-        proxy: config.proxy
+        server: "."
     });
 
     gulp.watch(path.join(config.dst, 'js') + '/**/*.js')
         .on('change', browserSync.reload);
-    gulp.watch(['scss/**/*.scss'], ['css']);
+    gulp.watch([
+        'scss/**/*.scss',
+        'flexy-framework/flexy/**/*.scss'
+    ], ['css']);
     gulp.watch(settings.paths.fonts, ['fonts']);
 });
 

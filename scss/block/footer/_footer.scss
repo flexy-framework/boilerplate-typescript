@@ -1,0 +1,8 @@
+.b-footer {
+  margin-top: 4em;
+  padding: 1em 0;
+
+  @each $key, $value in $flexy-block-footer {
+    #{$key}: #{$value};
+  }
+}
