@@ -13,7 +13,7 @@
     margin-top: -.5em;
     margin-bottom: 1em;
     font-size: .9em;
-    color: #aaa;
+    color: map-get($flexy-theme-colors, gray);
   }
 
   &__sub {

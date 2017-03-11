@@ -1,0 +1,7 @@
+{
+  "name": "flexy-boilerplate",
+  "version": false,
+  "globalDependencies": {
+    "magnific-popup": "file:typings/magnific-popup.d.ts"
+  }
+}

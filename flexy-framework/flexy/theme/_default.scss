@@ -1,4 +1,14 @@
 $flexy-theme-height: 32px !default;
+
+$flexy-theme-sizes: (
+        xsmall: .67em,
+        small: .83em,
+        medium: 1em,
+        large: 1.17em,
+        xlarge: 1.5em,
+        xxlarge: 2em
+) !default;
+
 $flexy-theme-colors: (
         default: #96a8b2,
         error: #dd162d,
@@ -17,7 +27,7 @@ $flexy-theme-input-hover-color: darken($flexy-theme-input-color, 20%) !default;
 $flexy-theme-blockquote-border-size: 3px !default;
 $flexy-theme-breadcrumb-link-color: #96a8b2 !default;
 
-$flexy-divider-color: #ebf1f8 !default;
+$flexy-theme-divider-color: #ebf1f8 !default;
 
 @import "modifiers";
 @import "colors";
@@ -25,10 +35,8 @@ $flexy-divider-color: #ebf1f8 !default;
 @import "image";
 @import "heading";
 @import "card";
-@import "tab";
 @import "avatar";
 @import "embed";
-@import "segment";
 @import "blockquote";
 @import "input";
 @import "input-helper";
@@ -45,6 +53,9 @@ $flexy-divider-color: #ebf1f8 !default;
 @import "kbd";
 @import "errors";
 @import "tooltip";
-@import "badge";
 @import "breadcrumb";
 @import "typeset";
+
+@import "tab/index";
+@import "segment/index";
+@import "badge/index";

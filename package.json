@@ -45,6 +45,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-typescript": "^2.1.7",
     "karma-webpack": "^2.0.2",
+    "magnific-popup": "^1.1.0",
     "sass-lint": "^1.10.2",
     "tslint": "^4.5.1",
     "tslint-eslint-rules": "^3.4.0",

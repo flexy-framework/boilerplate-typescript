@@ -5,32 +5,35 @@
 }
 
 .m-shadow {
-  border-radius: $flexy-theme-border-radius;
-  box-shadow: 0 20px 55px -8px hsla(0, 0%, 7%, .4), 0 0 0 1px hsla(0, 0%, 7%, .1) inset;
+  // 60 fps shadow animation
+  // http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+  position: relative;
+  box-shadow: 0 8px 24px rgba(#000, 0.2);
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 16px 32px rgba(#000, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
 }
 
 .m-size {
-  &_xsmall {
-    font-size: .67em !important;
-  }
-
-  &_small {
-    font-size: .83em !important;
-  }
-
-  &_medium {
-    font-size: 1em !important;
-  }
-
-  &_large {
-    font-size: 1.17em !important;
-  }
-
-  &_xlarge {
-    font-size: 1.5em !important;
-  }
-
-  &_xxlarge {
-    font-size: 2em !important;
+  @each $name, $size in $flexy-theme-sizes {
+    &_#{$name} {
+      font-size: #{$size} !important;
+    }
   }
 }

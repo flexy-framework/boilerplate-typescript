@@ -2,3 +2,7 @@
   font-weight: normal;
   @include antialias;
 }
+
+a {
+  text-decoration: none;
+}

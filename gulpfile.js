@@ -71,6 +71,7 @@ gulp.task('watch', function () {
         'flexy-framework/flexy/**/*.scss'
     ], ['css']);
     gulp.watch(settings.paths.fonts, ['fonts']);
+    gulp.watch('./index.html').on('change', browserSync.reload);
 });
 
 gulp.task('default', function () {

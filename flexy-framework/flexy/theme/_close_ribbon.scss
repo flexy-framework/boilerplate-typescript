@@ -4,7 +4,7 @@
   top: 0;
   right: 1em;
   z-index: 1;
-  color: #eee;
+  color: #fff;
   font-size: 1.1em;
   cursor: pointer;
   padding: .5em 0;
@@ -22,11 +22,9 @@
     font-size: 0.5em;
     position: absolute;
     height: 2.6em;
-    border: 1.5em solid #F44336;
     z-index: -1;
     top: -1em;
     border-top-width: 1.5em;
-    border-bottom-color: transparent;
     right: 0;
     transition: height 0.5s;
   }
@@ -36,7 +34,6 @@
     font-size: 0.5em;
     position: absolute;
     border-style: solid;
-    border-color: transparent transparent #B71C1C transparent;
     top: -1em;
     right: 3em;
     border-width: 0 0 1em 0.7em;
@@ -44,7 +41,6 @@
   }
 
   &:hover::after {
-    border: 1.5em solid #EF5350;
     border-bottom-color: transparent;
     height: 3.2em;
     transition: height 0.5s;
@@ -52,7 +48,26 @@
 
   &:hover {
     line-height: 0.9em;
-    color: #333;
     transition: line-height 0.5s;
+  }
+
+  @include flexy-colors() {
+    &::after {
+      border: {
+        width: 1.5em;
+        style: solid;
+        color: $flexy-current-color $flexy-current-color transparent $flexy-current-color;
+      }
+    }
+
+    &::before {
+      border-color: transparent transparent darken($flexy-current-color, 10%) transparent;
+    }
+
+    &:hover::after {
+      border: {
+        color: $flexy-current-color $flexy-current-color transparent $flexy-current-color;
+      }
+    }
   }
 }
