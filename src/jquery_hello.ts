@@ -1,5 +1,6 @@
-import $ from 'jquery';
+import $ from "jquery";
+import FastClick from "fastclick";
 
 $(() => {
-    console.log(123);
+    FastClick['attach'](document.body);
 });

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 
 export interface IHelloWorldProps {
     content: string;
@@ -10,6 +10,6 @@ export class HelloWorld extends React.Component<IHelloWorldProps, {}> {
     }
 
     render() {
-        return <div>{this.props.content}</div>
+        return <div>{this.props.content}</div>;
     }
 }

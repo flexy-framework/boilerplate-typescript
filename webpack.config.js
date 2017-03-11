@@ -46,9 +46,6 @@ module.exports = {
                 warnings: process.env.NODE_ENV != 'production'
             }
         }),
-        new webpack.ProvidePlugin({
-            'Promise': 'bluebird'
-        }),
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')

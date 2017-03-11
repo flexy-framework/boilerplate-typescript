@@ -1,0 +1,4 @@
+{
+  "dst": "./dist",
+  "proxy": "localhost:8000"
+}
