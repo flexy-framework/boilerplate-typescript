@@ -11,6 +11,9 @@
 ## Команды
 
 `npm run build` - Сборка для продакшена
+
 `npm run watch:webpack` - Для сборки js
+
 `npm run watch:web` - Для сборки scss, images, fonts
+
 `npm test` - Запуск тестов
